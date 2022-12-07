@@ -1,0 +1,279 @@
+.register-content {
+    margin: auto;
+    position: relative;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    background: url('http://192.168.1.54:3001/background.jpg') no-repeat fixed center;
+    overflow: auto;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s;
+}
+
+.login-content {
+    margin: auto;
+    position: relative;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    background: url('http://192.168.1.54:3001/background.jpg') no-repeat fixed center;
+    overflow: auto;
+    overflow-x: hidden;
+    animation: fadeIn 1.5s;
+}
+
+.MuiBox-root {
+    animation: fadeIn 2.5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.form-register {
+    position: absolute;
+    width: 35rem;
+    top: 20rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.input-form {
+    width: 250px;
+    position: relative;
+}
+
+.input-form label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 300ms;
+    transition-timing-function: linear
+}
+
+.input-form input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    background: #f8f8f8;
+}
+
+.input-form input:valid + label,input:focus + label {
+  padding-left: 0;
+  transform: translateY(-80%);
+  font-size: 14px;
+  color: #777;
+}
+
+.oval-top {
+    width:290px;
+    height: 100px;
+    border-radius:100px;
+    position: absolute;
+    background-color: rgb(190, 187, 187);
+    transition-timing-function: linear;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-name: top-position;
+}
+
+.oval-top:after, .oval-top:before{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+
+.oval-top::after{
+    width: 90px;
+    height: 90px;
+    top: -141px;
+    left: -130px;
+}
+.oval-top::before{
+    width: 148px;
+    height: 180px;
+    top: -81px;
+    left: 81px;
+}
+
+.oval-middle {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(190, 187, 187);
+    border-radius: 100px;
+    transition-timing-function: linear;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    animation-name: mid-position;
+}
+
+.oval-middle:after, .oval-middle:before{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+
+.oval-middle::after{
+    width: 57px;
+    height: 55px;
+    top: -89px;
+    left: -13px;
+}
+.oval-middle::before{
+    width: 51px;
+    height: 60px;
+    top: -13px;
+    left: 14px;
+}
+
+.oval-middle-mirror {
+    position: absolute;
+    height: 16px;
+    width: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 75%;
+    transition-timing-function: linear;
+    animation-duration: 45s;
+    animation-iteration-count: infinite;
+    animation-name: bottom-position;
+}
+
+.oval-middle-mirror:after, .oval-middle-mirror:before{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+
+.oval-middle-mirror::after{
+    width: 50px;
+    height: 20px;
+    top: 0px;
+    left: -1px;
+}
+.oval-middle-mirror::before{
+    width: 34px;
+    height: 18px;
+    top: -6px;
+    left: 12px;
+}
+
+@keyframes top-position {
+    0%   {left:-25%; top:8%;}
+    100% {left:100%; top:8%;}
+}
+
+@keyframes mid-position {
+    0%   {left:-10%; top:4%;}
+    100% {left:100%; top:4%;}
+}
+
+@keyframes bottom-position {
+    0%   {left:-10%; top:80%;}
+    100% {left:100%; top:80%;}
+}
+
+.snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+}
+@-webkit-keyframes snowflakes-fall{
+    0%{top:-10%}100%{top:100%}
+}
+@-webkit-keyframes snowflakes-shake{
+    0%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+    50%{-webkit-transform:translateX(80px);transform:translateX(80px)}
+    100%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+}
+@keyframes snowflakes-fall{
+    0%{top:-10%}100%{top:100%}
+}
+@keyframes snowflakes-shake{
+    0%{transform:translateX(0px)}
+    50%{transform:translateX(80px)}
+    100%{transform:translateX(0px)}
+}
+.snowflake{
+    position:fixed;
+    top:-10%;
+    z-index:9999;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    -webkit-animation-name:snowflakes-fall,
+    snowflakes-shake;
+    -webkit-animation-duration:10s,3s;
+    -webkit-animation-timing-function:linear,ease-in-out;
+    -webkit-animation-iteration-count:infinite,infinite;
+    -webkit-animation-play-state:running,running;
+    animation-name:snowflakes-fall,snowflakes-shake;
+    animation-duration:10s,3s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite,infinite;
+    animation-play-state:running,running;
+}
+.snowflake:nth-of-type(0){
+    left:1%;
+    -webkit-animation-delay:0s,0s;
+    animation-delay:0s,0s}.snowflake:nth-of-type(1){
+    left:10%;
+    -webkit-animation-delay:1s,1s;
+    animation-delay:1s,1s
+}
+.snowflake:nth-of-type(2){
+    left:20%;
+    -webkit-animation-delay:6s,.5s;
+    animation-delay:6s,.5s
+}
+.snowflake:nth-of-type(3){
+    left:30%;
+    -webkit-animation-delay:4s,2s;
+    animation-delay:4s,2s
+}
+.snowflake:nth-of-type(4){
+    left:40%;
+    -webkit-animation-delay:2s,2s;
+    animation-delay:2s,2s
+}
+.snowflake:nth-of-type(5){
+    left:50%;
+    -webkit-animation-delay:8s,3s;
+    animation-delay:8s,3s
+}
+.snowflake:nth-of-type(6){
+    left:60%;
+    -webkit-animation-delay:6s,2s;
+    animation-delay:6s,2s
+}
+.snowflake:nth-of-type(7){
+    left:70%;
+    -webkit-animation-delay:2.5s,1s;
+    animation-delay:2.5s,1s
+}
+.snowflake:nth-of-type(8){
+    left:80%;
+    -webkit-animation-delay:1s,0s;
+    animation-delay:1s,0s
+}
+.snowflake:nth-of-type(9){
+    left:90%;
+    -webkit-animation-delay:3s,1.5s;
+    animation-delay:3s,1.5s
+}

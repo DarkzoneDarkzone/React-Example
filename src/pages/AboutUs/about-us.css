@@ -1,0 +1,39 @@
+.test-parallax {
+    height: 100%;
+    font: 400 15px/1.8 "Lato", sans-serif;
+}
+.test::-webkit-scrollbar {
+    display: none;
+}
+
+.img1 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("http://192.168.1.54:3001/airplane-.jpg");
+    min-height: 100%;
+}
+.img2 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("http://192.168.1.54:3001/fdgdfgdfg.jpg");
+    min-height: 100%;
+}
+
+.oval {
+    height: 100px;
+    width: 100px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    z-index: 1;
+    left: 0;
+    margin: auto;
+    right: 0;
+}
